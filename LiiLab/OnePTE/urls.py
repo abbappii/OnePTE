@@ -72,6 +72,8 @@ urlpatterns = [
         TokenVerifyView.as_view(),
         name="token_verify",
     ),
+    # project apis
+    path("api/v1/", include("PTEPractice.rest.urls")),
 ]
 
 if settings.DEBUG:
