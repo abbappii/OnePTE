@@ -16,3 +16,7 @@ def score_answer_task(answer_id):
 
     except Answer.DoesNotExist:
         pass
+
+'''
+having issue on redis on my local pc
+'''

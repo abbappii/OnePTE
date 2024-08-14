@@ -1,7 +1,7 @@
 from django.urls import path
 from ..views.answers import (
     AnswerCreateView,
-    AnswerDetailView
+    AnswerDetailView,
 )
 
 urlpatterns = [
