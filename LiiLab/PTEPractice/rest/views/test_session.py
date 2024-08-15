@@ -22,10 +22,10 @@ class UserTestSessionListView(generics.ListAPIView):
 
         if question_type:
             if question_type == 'SST':
-                sessions = sessions.filter(sst_questions__isnull=False)
+                sessions = sessions.filter(sst_questions__isnull=False).distinct()
             elif question_type == 'RO':
-                sessions = sessions.filter(ro_questions__isnull=False)
+                sessions = sessions.filter(ro_questions__isnull=False).distinct()
             elif question_type == 'RMMCQ':
-                sessions = sessions.filter(rmmcq_questions__isnull=False)
+                sessions = sessions.filter(rmmcq_questions__isnull=False).distinct()
 
         return sessions
