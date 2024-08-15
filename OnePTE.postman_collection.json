@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "32db80d1-19ba-4589-800a-0884feecd95d",
+		"name": "OnePTE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15819940",
+		"_collection_link": "https://lunar-firefly-467844.postman.co/workspace/Supplers~780128a1-ca46-4a89-824b-ffee8f7978c6/collection/15819940-32db80d1-19ba-4589-800a-0884feecd95d?action=share&source=collection_link&creator=15819940"
+	},
+	"item": [
+		{
+			"name": "SST Questions",
+			"item": [
+				{
+					"name": "SST Question List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"audios\": [\n        {\n            \"speaker\": \"Emily Davis\",\n            \"audio_file\": \"/home/bappi/Node/NF/LilaB/media/audio_files/6.mp3\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/questions/?type=SST",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"questions",
+								""
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "SST"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SST Question Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Summarize the economic impacts of tourism\",\n    \"reference_summary\": \"Tourism boosts local economies through job creation, foreign exchange earnings, and infrastructure development.\",\n    \"time_limit\": 300,\n    \"audios\": [\n        {\"speaker\": \"Professor David Thompson\", \"audio_file\": \"/home/bappi/Node/NF/LilaB/media/audio_files/1.mp3\"}\n    ],\n    \"question_type\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/questions/sst/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"questions",
+								"sst",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SST Question detail",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"audios\": [\n        {\n            \"speaker\": \"Emily Davis\",\n            \"audio_file\": \"/home/bappi/Node/NF/LilaB/media/audio_files/6.mp3\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/questions/6/?type=SST",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"questions",
+								"6",
+								""
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "SST"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RO Questions",
+			"item": [
+				{
+					"name": "RO Question List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/questions/?type=RO",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"questions",
+								""
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "RO"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RO Question Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Arrange the stages of the water cycle\",\n    \"paragraphs\": [\n        \"Condensation\",\n        \"Evaporation\",\n        \"Precipitation\",\n        \"Collection\"\n    ],\n    \"correct_order\": [\n        \"Evaporation\",\n        \"Condensation\",\n        \"Precipitation\",\n        \"Collection\"\n    ],\n    \"question_type\": 2\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/questions/ro/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"questions",
+								"ro",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RO Question detail",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Arrange the stages of the water cycle.\",\n    \"correct_order\": [\n        \"Evaporation\",\n        \"Condensation\",\n        \"Precipitation\",\n        \"Collection\"\n    ],\n    \"question_type\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/questions/2/?type=RO",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"questions",
+								"2",
+								""
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "RO"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RMMCQ Questions",
+			"item": [
+				{
+					"name": "RMMCQ Question List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/questions/?type=RMMCQ",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"questions",
+								""
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "RMMCQ"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RMMCQ Question Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Which of the following are fundamental rights?\",\n    \"passage\": \"Fundamental rights are basic human rights protected by law.\",\n    \"options\": [\n        \"Right to education\",\n        \"Right to vote\",\n        \"Right to free speech\",\n        \"Right to privacy\"\n    ],\n    \"correct_options\": [\n        \"Right to education\",\n        \"Right to free speech\",\n        \"Right to privacy\"\n    ],\n    \"question_type\": 3\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/questions/rmmcq/create/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"questions",
+								"rmmcq",
+								"create",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RMMCQ Question Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/questions/5/?type=RMMCQ",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"questions",
+								"5",
+								""
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "RMMCQ"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Answer",
+			"item": [
+				{
+					"name": "Answers List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/answers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"answers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Answer Create SST Q",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sst_question\": 1,\n    \"sst_answer\": \"Renewable energy benefits include reduced carbon emissions\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/answers/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"answers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Answer Create RO Q",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ro_question\": 2,\n    \"ro_answer\": [\n        \"Evaporation\",\n        \"Condensation\",\n        \"Precipitation\",\n        \"Collection\"\n    ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/answers/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"answers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Answer Create RMMCQ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rmmcq_question\": 7,\n    \"rmmcq_answer\": [\n        \"Right to free speech\",\n        \"Right to privacy\"\n    ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/answers/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"answers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Answer Detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/answers/37/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"answers",
+								"37",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Practice Session",
+			"item": [
+				{
+					"name": "Test session Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sst_questions\": [],\n    \"ro_questions\": [1,4],\n    \"rmmcq_questions\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/v1/test-sessions/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"test-sessions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test session List",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "User based test session",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login token",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIzNzQ5MTI3LCJpYXQiOjE3MjM2NjI3MjcsImp0aSI6ImZiNWJlMWIwMzE4NzQ0MTZhMjJmODgwMzhiNTU0MTFlIiwidXNlcl9pZCI6MX0.r2PGNmLeZQt08ZAwoYQXf8EXk9wlZAz6WYTbfT1_hgI",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
